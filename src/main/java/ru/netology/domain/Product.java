@@ -29,4 +29,8 @@ public class Product {
     this.name = name;
   }
 
+  public boolean matches(String search) {
+    return this.getName().equalsIgnoreCase(search);
+  }
+
 }

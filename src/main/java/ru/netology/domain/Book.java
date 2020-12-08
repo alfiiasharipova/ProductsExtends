@@ -20,4 +20,10 @@ public class Book extends Product {
     this.author = author;
   }
 
+  public boolean matches(String search) {
+    if (super.matches(search))
+      return true;
+    return this.getAuthor().equalsIgnoreCase(search);
+  }
+
 }

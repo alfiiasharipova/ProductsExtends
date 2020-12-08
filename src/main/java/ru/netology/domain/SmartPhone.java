@@ -19,4 +19,10 @@ public class SmartPhone extends Product {
     public void setBrand(String brand) {
         this.brand = brand;
     }
+
+    public boolean matches(String search) {
+        if (super.matches(search))
+            return true;
+        return this.getBrand().equalsIgnoreCase(search);
+    }
 }
